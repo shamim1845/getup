@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
+import { useRouter } from "next/navigation";
 
 const FormSchema = z.object({
   username: z.string().min(2, {
@@ -33,6 +34,8 @@ const FormSchema = z.object({
 });
 
 export function RegisterForm() {
+  const router = useRouter();
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -58,12 +61,16 @@ export function RegisterForm() {
       )
       .then((res) => {
         console.log(res);
+
+        toast({
+          title: res.data?.message,
+        });
+        if (res.data?.success) {
+          router.push("/verify");
+        }
       })
       .catch((err) => {
         console.log(err);
-        // toast({
-        //   title: err,
-        // });
       });
   }
 

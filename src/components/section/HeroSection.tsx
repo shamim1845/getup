@@ -36,10 +36,10 @@ const HeroSection = () => {
             alt="hero img"
             width={609}
             height={471}
-            className=""
+            className=" w-full h-full"
           />
 
-          <div className="absolute bottom-[15%] right-[50%] translate-x-[30%] w-[193px] h-[218px] bg-[#fff] flex flex-col justify-between rounded z-50">
+          <div className="absolute bottom-[10%] right-[50%] translate-x-[30%] w-[193px] h-[218px] bg-[#fff] flex flex-col justify-between rounded z-50">
             <div className="p-4">
               <h3 className="font-medium text-[18px] leading-[32px]">
                 Meeting with John

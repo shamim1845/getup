@@ -14,7 +14,7 @@ const Feature1 = () => {
             alt="bitmap"
             width={219}
             height={95}
-            className="absolute top-[110px] md:top-[110px] right-0 lg:-right-[100px] z-50"
+            className="absolute top-[110px] md:top-[115px] right-0 lg:-right-[100px] z-50"
           />
 
           <Image
@@ -22,11 +22,11 @@ const Feature1 = () => {
             alt="bitmap"
             width={154}
             height={167}
-            className="absolute -top-5 md:top-0 left-0 md:-left-[100px] -z-10"
+            className="absolute -top-5 md:-top-[30px] left-0 md:-left-[20px] -z-10"
           />
 
           {/*  */}
-          <div className="absolute bottom-0 left-0  w-[193px] h-[218px] bg-[#fff] flex flex-col justify-between rounded z-50">
+          <div className="absolute bottom-[90px] left-0 lg:-left-[30px]  w-[193px] h-[218px] bg-[#fff] flex flex-col justify-between rounded z-50">
             <div className="p-4">
               <h3 className="font-medium text-[18px] leading-[32px]">
                 Meeting with John

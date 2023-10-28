@@ -5,13 +5,19 @@ const NavList = ({ classList }: { classList?: string }) => {
   return (
     <ol className={cn("flex gap-5 lg:gap-10", classList)}>
       <li>
-        <Link href={"/"}>Demos</Link>
+        <Link href={"/"} className="hover:text-brandSecondary transition-all">
+          Demos
+        </Link>
       </li>
       <li>
-        <Link href={"/"}>Pages</Link>
+        <Link href={"/"} className="hover:text-brandSecondary transition-all">
+          Pages
+        </Link>
       </li>
       <li>
-        <Link href={"/"}>Support</Link>
+        <Link href={"/"} className="hover:text-brandSecondary transition-all">
+          Support
+        </Link>
       </li>
     </ol>
   );

@@ -10,7 +10,7 @@ const MeetWithClient = () => {
           Meet with clients <br /> anytime, anywhere.
         </h3>
 
-        <div className="flex flex-col md:flex-row gap-10">
+        <div className="flex flex-col md:flex-row gap-20">
           {/* left */}
           <div className="flex-1 relative">
             <Image
@@ -18,7 +18,7 @@ const MeetWithClient = () => {
               alt="pattern"
               width={176}
               height={191}
-              className="absolute bottom-0 left-0 right-0"
+              className="absolute -bottom-[35px] -left-[35px] -z-10"
             />
 
             <Image
@@ -26,7 +26,7 @@ const MeetWithClient = () => {
               alt="pattern"
               width={475}
               height={593}
-              // className="absolute top-0 left-0"
+              className="w-full h-full z-30"
             />
           </div>
 
