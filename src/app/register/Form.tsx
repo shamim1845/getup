@@ -19,9 +19,7 @@ import { toast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 
 const FormSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
+  username: z.string().email("User name must be a valid email"),
   password: z.string().min(8, {
     message: "Password must be at least 8 characters.",
   }),
