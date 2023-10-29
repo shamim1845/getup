@@ -4,9 +4,9 @@ import React from "react";
 const GrowYourBussiness = () => {
   return (
     <section>
-      <div className="section_padding mx-auto flex flex-col md:flex-row justify-center gap-20 md:mt-20">
-        <div>
-          <h3 className="heading2  py-20">
+      <div className="section_padding max-w-[1160px] mx-auto flex flex-col justify-center items-center md:flex-row md:justify-between gap-20 md:mt-20">
+        <div className="flex flex-col items-center md:items-start">
+          <h3 className="heading2 text-center md:text-left  py-20">
             Grow your <br /> business fast.
           </h3>
           {/*  */}
@@ -48,7 +48,7 @@ const GrowYourBussiness = () => {
                 <h6 className="font-bold text-[21px] leading-[34px]">
                   Find better leads
                 </h6>
-                <p className="text-brandMuted">
+                <p className="text-brandMuted max-w-[240px]">
                   We receive over 50 new job submission at our website.
                 </p>
               </div>
@@ -102,9 +102,9 @@ const GrowYourBussiness = () => {
               </div>
               <div>
                 <h6 className="font-bold text-[21px] leading-[34px]">
-                  Find better leads
+                  Set instant meeting{" "}
                 </h6>
-                <p className="text-brandMuted">
+                <p className="text-brandMuted  max-w-[240px]">
                   We receive over 50 new job submission at our website.
                 </p>
               </div>
@@ -146,7 +146,7 @@ const GrowYourBussiness = () => {
                 <h6 className="font-bold text-[21px] leading-[34px]">
                   Get paid seemlessly
                 </h6>
-                <p className="text-brandMuted">
+                <p className="text-brandMuted  max-w-[240px]">
                   We receive over 50 new job submission at our website.
                 </p>
               </div>
@@ -168,7 +168,7 @@ const GrowYourBussiness = () => {
             alt="pattern"
             width={475}
             height={593}
-            // className="absolute top-0 left-5"
+            className="w-full h-full"
           />
         </div>
       </div>

@@ -8,9 +8,9 @@ const HowWorks = () => {
           Working with <br /> Instappoint is simple.
         </h3>
 
-        <div className="max-w-[1200px] mx-auto flex flex-col justify-center md:flex-row flex-wrap gap-20 ">
-          {/*  */}
-          <div className="flex flex-col gap-10  w-full h-full max-w-[273px] max-h-[273px] ">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-[273px] sm:grid-cols-[273px_273px] lg:grid-cols-[273px_273px_273px] gap-10 place-content-center sm:mb-20 md:mb-10 ">
+          {/* 1 */}
+          <div className="flex flex-col gap-10   ">
             <div className="flex gap-5 ">
               <div
                 className="bg-brandSecondary w-[97px] h-[97px] flex justify-center items-center rounded relative "
@@ -58,7 +58,7 @@ const HowWorks = () => {
                   viewBox="0 0 252 198"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute left-[100px] top-[0px] lg:hidden"
+                  className="absolute left-[130px] -top-[30px] hidden sm:block lg:hidden rotate-[10deg]"
                 >
                   <path
                     d="M11.6252 70.7864C11.6252 70.7864 122.254 36.7247 231.137 127.753"
@@ -112,8 +112,8 @@ const HowWorks = () => {
           </div>
 
           {/* 2 */}
-          <div className="flex flex-col items-center lg:items-start gap-10  w-full h-full md:max-w-[273px] md:max-h-[273px] lg:translate-y-10">
-            <div className="flex gap-5">
+          <div className="flex flex-col gap-10 sm:translate-y-[150px] md:translate-y-[50px]">
+            <div className="flex gap-5 sm:justify-center">
               <div
                 className="bg-brandSecondary w-[97px] h-[97px] flex justify-center items-center rounded relative "
                 style={{ boxShadow: "0px 32px 54px 0px #258AFF39" }}
@@ -155,11 +155,11 @@ const HowWorks = () => {
 
               <svg
                 width="252"
-                height="140"
+                height="198"
                 viewBox="0 0 252 198"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="hidden lg:block flex-1 mt-5"
+                className="hidden lg:block flex-1 -mt-10 translate-x-3"
               >
                 <path
                   d="M11.6252 70.7864C11.6252 70.7864 122.254 36.7247 231.137 127.753"
@@ -178,7 +178,7 @@ const HowWorks = () => {
               </svg>
             </div>
 
-            <div className="flex flex-col items-center lg:items-start gap-5 lg:-mt-14">
+            <div className="flex flex-col sm:items-center md:items-start  gap-5 lg:-mt-14">
               <h6 className="font-bold text-[24px]">Book Appointments</h6>
               <p className="text-brandMuted">
                 We’ve helped over 2,500 job seekers <br /> to get into the most
@@ -187,7 +187,7 @@ const HowWorks = () => {
             </div>
           </div>
           {/*  3 */}
-          <div className="flex flex-col gap-10  w-full h-full max-w-[273px] max-h-[273px] lg:translate-y-20">
+          <div className="flex flex-col gap-10 sm:translate-y-[150px] md:translate-y-[110px]">
             <div className="flex gap-5">
               <div
                 className="bg-brandSecondary w-[97px] h-[97px] flex justify-center items-center rounded relative "
@@ -243,7 +243,7 @@ const HowWorks = () => {
                   viewBox="0 0 252 198"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute left-[100px] -top-[80px] rotate-[120deg] lg:hidden "
+                  className="absolute left-[100px] -top-[80px] rotate-[145deg] hidden sm:block lg:hidden "
                 >
                   <path
                     d="M11.6252 70.7864C11.6252 70.7864 122.254 36.7247 231.137 127.753"

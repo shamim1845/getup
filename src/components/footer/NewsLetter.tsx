@@ -77,7 +77,7 @@ function NewsLetter() {
             </FormItem>
           )}
         />
-        <Button size={"lg"} type="submit">
+        <Button type="submit" className="h-12">
           Subscribe
         </Button>
       </form>

@@ -51,13 +51,13 @@
 
   /* utility */
   .section_padding {
-    @apply px-[20px] md:px-[38px];
+    @apply px-[20px] sm:px-[38px];
   }
   .heading1 {
-    @apply font-bold text-[45px]  md:text-[60px] lg:text-[70px] leading-[40px] md:leading-[70px] tracking-[-1px];
+    @apply font-bold text-[42px]  sm:text-[60px]  md:text-[60px] lg:text-[70px] leading-[45px] sm:leading-[70px] tracking-[-1px];
   }
   .heading2 {
-    @apply font-bold text-[40px] md:text-[58px] leading-[50px] md:leading-[64px] tracking-[-1px];
+    @apply font-bold text-[35px] sm:text-[40px] md:text-[50px] lg:text-[58px]   leading-[50px] md:leading-[64px] tracking-[-1px];
   }
 }
 

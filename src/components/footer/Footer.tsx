@@ -63,7 +63,7 @@ const Footer = () => {
   return (
     <footer className="section_padding py-[10rem] w-full max-w-[1110px] mx-auto">
       <div className="flex flex-col lg:flex-row gap-10">
-        <div className="flex-2 grid grid-cols-2 md:grid-cols-3 gap-10">
+        <div className="flex-3 grid grid-cols-2 md:grid-cols-3 gap-10">
           {footerConstant.map((item) => (
             <div key={item.title} className="flex flex-col gap-5">
               <h6 className="font-medium text-[18px]">{item.title}</h6>
@@ -71,7 +71,12 @@ const Footer = () => {
                 <ul>
                   {item.links.map((linkItem) => (
                     <li key={linkItem.name} className="text-brandMuted">
-                      <Link href={linkItem.link}>{linkItem.name}</Link>
+                      <Link
+                        href={linkItem.link}
+                        className="hover:text-brandSecondary transition-colors"
+                      >
+                        {linkItem.name}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -80,12 +85,12 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="flex-1 flex flex-col gap-5">
+        <div className="flex-2 flex flex-col gap-5">
           <h6 className="font-medium text-[18px]">
             Subscribe to Our Newsletter
           </h6>
           <div>
-            <p className="text-brandMuted">
+            <p className="text-brandMuted max-w-[394px]">
               Time is the most precious thing you have when bootstrapping. You
               can&apos;t take time.
             </p>

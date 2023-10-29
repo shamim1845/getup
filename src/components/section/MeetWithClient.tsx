@@ -6,24 +6,24 @@ const MeetWithClient = () => {
   return (
     <section>
       <div className="section_padding max-w-[997px] mx-auto">
-        <h3 className="heading2 py-20">
+        <h3 className="heading2 py-20 text-center md:text-left">
           Meet with clients <br /> anytime, anywhere.
         </h3>
 
         <div className="flex flex-col md:flex-row gap-20">
           {/* left */}
-          <div className="flex-1 relative">
+          <div className="flex-1 relative ">
             <Image
               src={"/meet-client/dot-pattern.svg"}
               alt="pattern"
               width={176}
               height={191}
-              className="absolute -bottom-[35px] -left-[35px] -z-10"
+              className="absolute -bottom-[35px] md:bottom-[35px] lg:-bottom-[35px] -left-[35px] -z-10"
             />
 
             <Image
               src={"/meet-client/client-meeting.svg"}
-              alt="pattern"
+              alt="metting"
               width={475}
               height={593}
               className="w-full h-full z-30"

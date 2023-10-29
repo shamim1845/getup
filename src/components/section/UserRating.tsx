@@ -3,9 +3,9 @@ import React from "react";
 
 const UserRating = () => {
   return (
-    <section>
-      <div className="section_padding max-w-[1114px] mx-auto flex flex-col md:flex-row justify-between gap-20 md:gap-40">
-        <div className="flex-1 flex justify-between">
+    <section className="w-full max-w-[1114px] mx-auto py-[100px] md:pt-0">
+      <div className="section_padding flex flex-col md:flex-row justify-between gap-20 lg:gap-40">
+        <div className="flex-1 flex justify-between sm:justify-evenly md:justify-between">
           <div className="flex flex-col gap-5">
             <h4 className="heading1">10k</h4>
             <div className="flex gap-2">
@@ -170,7 +170,7 @@ const UserRating = () => {
           <h5 className="font-bold text-[34px] leading-[45px] -tracking-[0.59px]">
             Trusted by 25,000+ happy Marketers and WordPress users since 2018.
           </h5>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-10">
             <p className="text-brandMuted">Also featured in</p>
             <div className=" flex justify-between flex-wrap gap-5">
               <Image src={"/slack.svg"} alt="slack" width={129} height={34} />
