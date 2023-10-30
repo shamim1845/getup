@@ -14,9 +14,9 @@ export default function Home() {
       <div className="flex flex-col gap-[100px]">
         <HowWorks />
         <Feature1 />
-        {/* <GrowYourBussiness /> */}
-        {/* <MeetWithClient /> */}
-        {/* <Testimonial /> */}
+        <GrowYourBussiness />
+        <MeetWithClient />
+        <Testimonial />
       </div>
     </>
   );
