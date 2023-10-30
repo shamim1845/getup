@@ -40,7 +40,7 @@ const HeroSection = () => {
             className=" w-full h-full"
           />
 
-          <div className="absolute bottom-[5%] right-[50%] translate-x-[30%] z-50">
+          <div className="absolute bottom-[5%] right-[50%] translate-x-[30%] z-30">
             <MeetingWithJohn />
           </div>
         </div>

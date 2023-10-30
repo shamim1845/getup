@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "section_padding w-full max-w-[1550px] h-[55px] mt-[12px]  mx-auto flex items-center"
+        "section_padding w-full max-w-[1550px] h-[67px]   mx-auto flex items-center sticky top-0  bg-[#fff] z-50"
       )}
     >
       <nav className="flex justify-between items-center w-full">

@@ -6,8 +6,8 @@ const Feature1 = () => {
   return (
     <section>
       <div className="section_padding">
-        <h3 className="heading2 text-center py-20">
-          Control everything <br /> in a single place.
+        <h3 className="heading2 max-w-[493px] mx-auto text-center py-20">
+          Control everything in a single place.
         </h3>
         <div className="w-full max-w-[773px] h-[466px] mx-auto flex justify-center relative bg-[url('/feature1/bitmap.svg')]">
           <Image
@@ -15,7 +15,7 @@ const Feature1 = () => {
             alt="bitmap"
             width={343}
             height={225}
-            className="absolute top-[100px] right-0 lg:-right-[160px] z-50"
+            className="absolute top-[100px] right-0 lg:-right-[160px] z-30"
           />
 
           <Image
@@ -27,7 +27,7 @@ const Feature1 = () => {
           />
 
           {/* Meeting */}
-          <div className="absolute bottom-[90px] left-0 lg:-left-[55px] z-50">
+          <div className="absolute bottom-[90px] left-0 lg:-left-[55px] z-30">
             <MeetingWithJohn />
           </div>
         </div>

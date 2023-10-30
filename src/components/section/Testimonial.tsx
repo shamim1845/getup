@@ -88,7 +88,10 @@ const Testimonial = () => {
             <div className="flex items-center gap-10">
               <button
                 onClick={() => moveSlider("prev")}
-                className="group hover:bg-brandSecondary/20  w-10 h-10 flex justify-center items-center rounded transition-colors"
+                className={cn(
+                  "group   w-10 h-10 flex justify-center items-center rounded transition-colors",
+                  id < 0 ? "hover:bg-brandSecondary/20" : "cursor-not-allowed"
+                )}
               >
                 <svg
                   width="16"
@@ -111,7 +114,12 @@ const Testimonial = () => {
               </button>
               <button
                 onClick={() => moveSlider("next")}
-                className="group hover:bg-brandSecondary/20  w-10 h-10 flex justify-center items-center rounded transition-colors"
+                className={cn(
+                  "group w-10 h-10 flex justify-center items-center rounded transition-colors",
+                  id * -1 + 1 < testimonialsConstant.length
+                    ? "hover:bg-brandSecondary/20"
+                    : "cursor-not-allowed"
+                )}
               >
                 <svg
                   width="16"
