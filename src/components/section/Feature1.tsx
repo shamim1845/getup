@@ -15,7 +15,7 @@ const Feature1 = () => {
             alt="bitmap"
             width={343}
             height={225}
-            className="absolute top-[100px] right-0 lg:-right-[160px] z-30"
+            className="absolute top-[100px] right-0 lg:-right-[120px] z-30"
           />
 
           <Image
