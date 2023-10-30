@@ -176,15 +176,15 @@ const UserRating = () => {
               <Image src={"/slack.svg"} alt="slack" width={129} height={34} />
               <Image
                 src={"/microsoft.svg"}
-                alt="slack"
-                width={129}
-                height={34}
+                alt="microsoft"
+                width={156}
+                height={33}
               />
               <Image
                 src={"/facebook.svg"}
-                alt="slack"
-                width={129}
-                height={34}
+                alt="facebook"
+                width={150}
+                height={29}
               />
             </div>
           </div>

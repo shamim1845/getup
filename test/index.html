@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .slider-container {
+        width: 900px;
+        height: 400px;
+        overflow: hidden;
+      }
+      .slider {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 1800px;
+        position: relative;
+        left: 0;
+        transition: left 0.5s;
+      }
+      .slider > li {
+        float: left;
+      }
+      .slider > li > img {
+        width: 600px;
+        height: 400px;
+      }
+
+      .btn_group {
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+      }
+
+      .btn_group button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider-container">
+      <ul class="slider">
+        <li>
+          <img src="https://getup-shamim.vercel.app/grow/women.svg" />
+        </li>
+        <li>
+          <img
+            src="https://getup-shamim.vercel.app/meet-client/client-meeting.svg"
+          />
+        </li>
+        <li><img src="https://getup-shamim.vercel.app/grow/women.svg" /></li>
+      </ul>
+    </div>
+    <div class="btn_group">
+      <button class="prev">Prev</button>
+      <button class="next">Next</button>
+    </div>
+  </body>
+
+  <script>
+    const slider = document.querySelector(".slider");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+    let currentPosition = 0;
+    const step = 600;
+
+    //
+
+    function moveSlider(direction) {
+      if (direction === "prev") {
+        currentPosition += step;
+      } else {
+        currentPosition -= step;
+      }
+      slider.style.left = currentPosition + "px";
+    }
+
+    //
+    prevBtn.addEventListener("click", function () {
+      moveSlider("prev");
+    });
+    nextBtn.addEventListener("click", function () {
+      moveSlider("next");
+    });
+  </script>
+</html>

@@ -1,4 +1,5 @@
 "use client";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -34,11 +35,27 @@ const testimonialsConstant = [
 ];
 
 const Testimonial = () => {
-  const [id, setId] = useState<null | number>(null);
+  const [id, setId] = useState<number>(0);
 
+  // bottom handler
   const handleClick = (id: number) => {
-    setId(id);
+    setId(-id + 1);
   };
+
+  const step = 390;
+
+  //
+  function moveSlider(direction: string) {
+    if (direction === "prev") {
+      setId((prev) => (prev < 0 ? prev + 1 : prev));
+    }
+    if (direction === "next") {
+      setId((prev) =>
+        prev > (testimonialsConstant.length - 1) * -1 ? prev - 1 : prev
+      );
+    }
+  }
+
   return (
     <section className="">
       <div className="section_padding max-w-[997px] mx-auto  overflow-hidden">
@@ -69,14 +86,20 @@ const Testimonial = () => {
               1,000+ customers are loving Instappoint.
             </h3>
             <div className="flex items-center gap-10">
-              <button className="group hover:bg-brandSecondary/20  w-10 h-10 flex justify-center items-center rounded transition-colors">
+              <button
+                onClick={() => moveSlider("prev")}
+                className="group hover:bg-brandSecondary/20  w-10 h-10 flex justify-center items-center rounded transition-colors"
+              >
                 <svg
                   width="16"
                   height="28"
                   viewBox="0 0 16 28"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="stroke-[#E2E4E8] group-hover:stroke-brandPrimary"
+                  className={cn(
+                    "",
+                    id < 0 ? "stroke-[#258AFF]" : "stroke-[#E2E4E8]"
+                  )}
                 >
                   <path
                     d="M14 26L2 14L14 2"
@@ -86,14 +109,22 @@ const Testimonial = () => {
                   />
                 </svg>
               </button>
-              <button className="group hover:bg-brandSecondary/20  w-10 h-10 flex justify-center items-center rounded transition-colors">
+              <button
+                onClick={() => moveSlider("next")}
+                className="group hover:bg-brandSecondary/20  w-10 h-10 flex justify-center items-center rounded transition-colors"
+              >
                 <svg
                   width="16"
                   height="28"
                   viewBox="0 0 16 28"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="stroke-[#258AFF] group-hover:stroke-brandPrimary"
+                  className={cn(
+                    "",
+                    id * -1 + 1 < testimonialsConstant.length
+                      ? "stroke-[#258AFF]"
+                      : "stroke-[#E2E4E8]"
+                  )}
                 >
                   <path
                     d="M2 26L14 14L2 2"
@@ -107,33 +138,50 @@ const Testimonial = () => {
           </div>
         </div>
 
-        <div className="w-full flex gap-10">
-          {testimonialsConstant.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              className="min-w-[350px] border border-[#E2E4E8] p-7 flex flex-col gap-5 rounded-lg"
-            >
-              <Image
-                src={testimonial.avatar}
-                alt={testimonial.username}
-                width={48}
-                height={48}
-              />
-              <p>{testimonial.comment}</p>
+        {/* slider-container */}
+        <div className="w-full overflow-x-hidden">
+          <div
+            className={`w-[${
+              testimonialsConstant.length * step
+            }px] transition-[translate] duration-500 flex gap-10`}
+            style={{ translate: `${id * step}px` }}
+          >
+            {testimonialsConstant.map((testimonial) => (
+              <div
+                key={testimonial.id}
+                className="min-w-[350px] border border-[#E2E4E8] p-7 flex flex-col gap-5 rounded-lg float-left"
+              >
+                <Image
+                  src={testimonial.avatar}
+                  alt={testimonial.username}
+                  width={48}
+                  height={48}
+                />
+                <p>{testimonial.comment}</p>
 
-              <div>{testimonial.username}</div>
-            </div>
-          ))}
+                <div>{testimonial.username}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <br />
         <br />
         <div className="w-full flex gap-10 pb-5">
           {testimonialsConstant.map((testimonial) => (
-            <div
+            <button
+              className="py-2"
               onClick={() => handleClick(testimonial.id)}
               key={testimonial.id}
-              className="h-2 w-10 bg-brandSecondary rounded-lg cursor-pointer"
-            ></div>
+            >
+              <div
+                className={cn(
+                  "h-2 w-10 rounded-lg cursor-pointer transition-colors",
+                  id * -1 + 1 == testimonial.id
+                    ? "bg-brandSecondary "
+                    : "bg-[#E2E4E8] "
+                )}
+              ></div>
+            </button>
           ))}
         </div>
       </div>
