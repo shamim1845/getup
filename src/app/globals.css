@@ -93,7 +93,7 @@
         transparent 77%,
         transparent 100%
       ),
-      linear-gradient(to right, #974d10, #f06e05);
+      linear-gradient(to right, #197ef1, #4588d4);
   }
   .error-container > span.four:before,
   .error-container > span.four:after {
@@ -121,7 +121,7 @@
         transparent 51%,
         transparent 100%
       ),
-      linear-gradient(to top, #63350f, #974d10, #ca630e, #f06e05);
+      linear-gradient(to top, #1b7ceb, #2783ec, #358cf0, #4a97f0);
   }
   .error-container > span.four:after {
     width: 137px;
@@ -129,7 +129,7 @@
     transform: rotate(-49.5deg);
     left: -18px;
     bottom: 36px;
-    background: linear-gradient(to right, #63350f, #974d10, #ca630e, #f06e05);
+    background: linear-gradient(to right, #1b7ceb, #2783ec, #358cf0, #4a97f0);
   }
 
   .error-container > span.zero {
@@ -144,7 +144,7 @@
         transparent 51%,
         transparent 100%
       ),
-      linear-gradient(to top right, #63350f, #974d10, #ca630e, #f06e05);
+      linear-gradient(to top right, #1b7ceb, #2783ec, #358cf0, #4a97f0);
     overflow: hidden;
     animation: bgshadow 5s infinite;
   }
