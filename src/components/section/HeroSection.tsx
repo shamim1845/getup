@@ -37,6 +37,7 @@ const HeroSection = () => {
             alt="hero img"
             width={609}
             height={471}
+            priority
             className=" w-full h-full"
           />
 
